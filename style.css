@@ -3,31 +3,114 @@ body {
     background: linear-gradient(to top, #F2E6EE, #5a22b4 );
     height: 100vh;
 }
+
+.banner {
+    opacity: 0;
+    animation: fadeIn 1.0s ease-in forwards;
+}
+
 .banner2 {
     position: relative;
     display: block;
-    margin-top: -16%;
+    margin-top: -15%;
     width: 93%;
     justify-self: center;
-    border-radius: 12px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
     z-index: 0;
 }
 .titulo1 {
     width: 20%;
     position: relative;
     display: block;
-    margin-top: 9%;
-    margin-left: 23%;
+    margin-top: 12%;
+    margin-left: 28%;
     z-index: 1;
 }
  nav ul {
     position: relative;
+    flex-direction: row;
     z-index: 100;
     list-style: none;
     display: flex;
     justify-self: flex-end;
     gap: 9vw;
-    margin-top: 2%;  
-    margin-right: 3%;
+    margin-top: 20px;  
+    margin-right: 20px;
     color:#F2E6EE;
   }
+
+  nav ul li {
+    font-size: 20px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: rgba(90, 34, 180, 0.8);
+    backdrop-filter: blur(5px);
+    z-index: 10;
+  }
+
+  .about-us {
+    margin: 2% 3.5%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    animation: fadeIn 1.0s ease-in forwards;
+    background-color:rgb(238, 233, 233);
+   
+  }
+
+.box1, .box2, .box3 { 
+    width: 27%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.nboxes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;}
+  
+  .icone1 {
+    width: 110px;
+    flex-direction: row;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 1000;
+  }
+
+  .title-h1 {
+    font-size: 48pt;
+  }
+
+  .title-h1 p {
+    margin: 0px !important;
+  }
+
+  @keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
