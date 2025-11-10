@@ -49,17 +49,3 @@ window.addEventListener("gmp-load", () => {
         })
         .catch((err) => console.error("Erro ao carregar dados:", err));
     });
-
-    const wrapper = document.querySelector(".slides-wrapper");
-const next = document.querySelector(".next-btn");
-const prev = document.querySelector(".prev-btn");
-
-let scrollAmount = 0;
-
-next.addEventListener("click", () => {
-  wrapper.scrollBy({ left: 320, behavior: "smooth" });
-});
-
-prev.addEventListener("click", () => {
-  wrapper.scrollBy({ left: -320, behavior: "smooth" });
-});

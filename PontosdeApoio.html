@@ -1,106 +1,91 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Paws - Início</title>
-  <link rel="icon" type="image/png" href="images/favicon.png" />
-  <link rel="stylesheet" href="style.css" />
-  <script src="pontos.js" defer></script> <!-- seu JS dinâmico -->
-  <script src="https://unpkg.com/@googlemaps/markerclustererplus/dist/index.min.js" defer></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&loading=async&libraries=marker&v=beta&solution_channel=GMP_CCS_complexmarkers_v3" defer></script>
-  <style>
-    
-  </style>
-</head>
-<body>
-  <header>
-    <div class="regua" id="regua">
-      <a href="#" id="logoBtn" class="logo">
-        <img src="images/icon.png" class="icone1" />
-      </a>
-    </div>
 
-    <nav>
-      <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="PontosdeApoio.html">Pontos de Apoio</a></li>
-        <li><a href="Sobre.html">Sobre</a></li>
-        <li><a href="Contato.html">Contato</a></li>
-      </ul>
-      <button class="btn" onclick="toggleBusca()">
-        <img src="images/lupa.png" class="lupa" alt="Pesquisar" />
-      </button>
-      <div id="campoBusca" class="busca-container oculto">
-        <input type="text" id="barraBusca" placeholder="Digite sua busca..." />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paws - Pontos de Apoio</title>
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="pontos.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="regua" id="regua">
+        <a href="#" id="logoBtn" class="logo">
+          <img src="images/icon.png" class="icone1" alt="Logo Paws" />
+        </a>
       </div>
-    </nav>
 
-    <div class="banner fade-in">
-      <div class="container">
-        <img src="images/titulo1.png" class="titulo1" alt="Título" />
-        <img src="images/textobanner.png" class="texto1" alt="Texto" />
-      </div>
-      <img src="images/banner1.png" class="banner2" alt="Banner" />
-    </div>
-  </header>
+      <nav>
 
-  <div class="bg fade-in">
-    <h1>
-      Fazendo da nossa <span style="color: #a855f7;">cidade</span><br />
-      um lar saudável para os <span style="color: #a855f7;">animais</span>
-    </h1>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="PontosdeApoio.html" class="ativo">Pontos de Apoio</a></li>
+          <li><a href="Blog.html">Blog</a></li>
+          <li><a href="Sobre.html">Sobre</a></li>
+          <li><a href="Contato.html">Contato</a></li>
 
-<div class="slide-container">
-  <button class="prev-btn">&#10094;</button>
+        </ul>
 
-  <div class="slides-wrapper">
-    <div class="slides1">
-      <h3 class="card-titulo1">Ponto de Apoio 1</h3>
-      <img src="images/ex.1.webp" class="slide-image" alt="Ponto de Apoio 1" />
-      <p class="p-card1">
-        Localização: Rua 3, Praça Pôr do Sol <br>
-        Responsável: Marianna Souza <br>
-        Status água: 8/10 <br>
-        Status ração: 4/10
-      </p>
-    </div>
-
-    <div class="slides1">
-      <h3 class="card-titulo1">Ponto de Apoio 2</h3>
-      <img src="images/ex.1.webp" class="slide-image" alt="Ponto de Apoio 2" />
-      <p class="p-card1">
-        Localização: Rua das Flores <br>
-        Responsável: Lucas Lima <br>
-        Status água: 9/10 <br>
-        Status ração: 7/10
-      </p>
-    </div>
-
-    <div class="slides1">
-      <h3 class="card-titulo1">Ponto de Apoio 3</h3>
-      <img src="images/ex.1.webp" class="slide-image" alt="Ponto de Apoio 3" />
-      <p class="p-card1">
-        Localização: Av. Central <br>
-        Responsável: Joana Alves <br>
-        Status água: 10/10 <br>
-        Status ração: 6/10
-      </p>
-    </div>
-  </div>
-
-  <button class="next-btn">&#10095;</button>
-</div>
+        <button class="btn" onclick="toggleBusca()">
+          <img src="images/lupa.png" class="lupa" alt="Pesquisar" />
+        </button>
 
 
-  <gmp-map
-    center="-12.145802282381844, -44.985759906632246"
-    zoom="15"
-    map-id="DEMO_MAP_ID"
-    style="height: 500px; width: 100%;"
-    id="meuMapa"
-  ></gmp-map>
 
-  
-</body>
-</html>
+
+
+        <div id="campoBusca" class="busca-container oculto">
+          <input type="text" id="barraBusca" placeholder="Digite sua busca..." />
+
+        </div>
+      </nav>
+
+
+    </header>
+
+    <main>
+      <section class="intro fade-in">
+        <h1>
+          Fazendo da nossa <span style="color: #a855f7;">cidade</span><br />
+          um lar saudável para os <span style="color: #a855f7;">animais</span>
+        </h1>
+      </section>
+
+      <!-- Seção do mapa estático -->
+      <section class="mapa-container fade-in">
+        <h2>Mapa de Pontos de Apoio</h2>
+        <div class="mapa">
+          <img src="images/mapa.png" alt="Mapa estático" class="mapa-base" />
+
+          <!-- Marcadores manuais (você pode ajustar o position em CSS) -->
+          <div class="marcador" style="top: 35%; left: 45%;"></div>
+          <div class="marcador" style="top: 55%; left: 60%;"></div>
+          <div class="marcador" style="top: 65%; left: 30%;"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+      </section>
+
+      <!-- Carrossel de cards -->
+      <section class="pontos-container fade-in">
+        <h2>Pontos de Apoio Ativos</h2>
+        <div class="slide-container" id="listaPontos"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 Paws - Todos os direitos reservados 🐾</p>
+    </footer>

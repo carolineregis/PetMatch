@@ -1,65 +1,42 @@
-/*<script>
+// URL original do App Script
+const url = "https://script.google.com/macros/s/AKfycbyx8QpyggK8AyzR1y6_gVTHVzJrvyBvsGZoDi0aTpkEPvDeQTCZk24OpdyBfJWMj_L1/exec";
 
-function () {
-    const elements = doc.querySelectorAll
-}
-  function fadeInSequence() {
-     elements = document.querySelectorAll('.fade-in');
-    let delay = 0;
+const urlOriginal = "https://script.google.com/macros/s/AKfycbyx8QpyggK8AyzR1y6_gVTHVzJrvyBvsGZoDi0aTpkEPvDeQTCZk24OpdyBfJWMj_L1/exec";
 
-    elements.forEach((el, index) => {
-      setTimeout(() => {
-        el.classList.add('visible');
-      }, delay);
 
-      delay += 300; // intervalo de 300ms entre cada elemento
+async function carregarPontos() {
+  try {
+    const resposta = await fetch(url);
+    if (!resposta.ok) throw new Error("Erro ao buscar dados da planilha.");
+
+    const dados = await resposta.json();
+    const lista = document.getElementById("listaPontos");
+
+    lista.innerHTML = ""; // limpa o conteúdo anterior
+
+    dados.forEach((item) => {
+      const card = document.createElement("div");
+      card.classList.add("card");
+
+      card.innerHTML = `
+        <h3>Ponto de Apoio</h3>
+        <p><b>Data:</b> ${item["Carimbo de data/hora"]}</p>
+        <p><b>Nível de ração:</b> ${item["Nível de ração"]}</p>
+        <p><b>Água disponível:</b> ${item["Água disponível"]}</p>
+        <p><b>Status:</b> ${item["Status"]}</p>
+        <p><b>Avaria:</b> ${
+          item["O comedouro apresenta alguma avaria? Se sim, qual?"] || "—"
+        }</p>
+      `;
+
+      lista.appendChild(card);
     });
-  }
-
-  // Ativar ao carregar a página
-  window.addEventListener('load', fadeInSequence);
-</script> */
-
-
-const carousel = document.querySelector('.carousel');
-const nextBtn = document.querySelector('.next');
-const prevBtn = document.querySelector('.prev');
-
-/* Duplicar itens para loop infinito */
-carousel.innerHTML += carousel.innerHTML;
-
-/* Função para checar e resetar scroll */
-function checkScroll() {
-  const scrollWidth = carousel.scrollWidth / 2; /* metade original */
-  if (carousel.scrollLeft >= scrollWidth) {
-    carousel.scrollLeft -= scrollWidth;
-  } else if (carousel.scrollLeft <= 0) {
-    carousel.scrollLeft += scrollWidth;
+  } catch (erro) {
+    console.error("Erro ao carregar pontos:", erro);
+    document.getElementById("listaPontos").innerHTML =
+      "<p>Não foi possível carregar os pontos de apoio.</p>";
   }
 }
 
-/* Avançar */
-nextBtn.addEventListener('click', () => {
-  const scrollAmount = carousel.offsetWidth; /* rola a largura visível */
-  carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-  setTimeout(checkScroll, 500);
-});
-
-/* Voltar */
-prevBtn.addEventListener('click', () => {
-  const scrollAmount = carousel.offsetWidth;
-  carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-  setTimeout(checkScroll, 500);
-});
-
-/* Scroll automático */
-setInterval(() => {
-  const scrollAmount = carousel.offsetWidth / 2; /* metade da largura visível*/
-  carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-  setTimeout(checkScroll, 500);
-}, 3000);
-
-/* Resetar scroll ao redimensionar*/
-window.addEventListener('resize', () => {
-  carousel.scrollLeft = 0;
-});
+// Executa quando a página terminar de carregar
+document.addEventListener("DOMContentLoaded", carregarPontos);
