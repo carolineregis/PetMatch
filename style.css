@@ -212,68 +212,112 @@ h3 {
 }
 
 
-.mapa-container {
-  text-align: center;
-  margin: 80px auto;
-}
-
-.mapa {
+.pins {
+      width: 40px;
+      height: 40px;
+    }
+    
+/* ======================= */
+/*        SLIDES           */
+.slide-container {
   position: relative;
   width: 90%;
-  max-width: 900px;
-  margin: 0 auto;
-  border-radius: 16px;
+  margin: 40px auto;
   overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
 }
 
-.mapa-base {
+.slides-wrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slides1 {
+  min-width: 300px;
+  margin: 0 10px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  text-align: center;
+  padding: 15px;
+  flex-shrink: 0;
+}
+
+.slide-image {
   width: 100%;
-  height: auto;
-  display: block;
+  border-radius: 10px;
 }
 
-.marcador {
-  position: absolute;
-  width: 20px;
-  height: 20px;
+.prev-btn, .next-btn {
   background-color: #a855f7;
-  border-radius: 50%;
-  box-shadow: 0 0 10px rgba(168, 85, 247, 0.8);
+  color: white;
+  border: none;
+  font-size: 24px;
   cursor: pointer;
-  transition: transform 0.3s ease;
+  padding: 8px 18px;
+  border-radius: 50%;
+  transition: 0.3s;
 }
 
-.marcador:hover {
-  transform: scale(1.2);
+.prev-btn:hover, .next-btn:hover {
+  background-color: #7e22ce;
 }
+
 
 /* Carrossel */
-.slide-container {
+.carousel-container {
+  position: relative;
+  width: 90%;
+  overflow: hidden;
+}
+
+.carousel {
   display: flex;
-  gap: 20px;
   overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  padding: 20px;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* remove barra no Firefox */
 }
+.carousel::-webkit-scrollbar { display: none; }
 
-.slide-container::-webkit-scrollbar {
-  display: none;
-}
+.slide {
+  flex: 0 0 auto;
+  width: 300px;
+  margin: 0 10px;
 
-.slide-container .card {
-  flex: 0 0 300px;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  text-align: center;
   padding: 15px;
-  scroll-snap-align: start;
-  transition: transform 0.3s;
 }
 
-.slide-container .card:hover {
-  transform: translateY(-5px);
+.slide img {
+  width: 100%;
+  border-radius: 10px;
 }
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #a855f7;
+  color: white;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  padding: 10px 14px;
+  border-radius: 50%;
+  z-index: 10;
+  transition: background-color 0.3s;
+}
+
+.prev:hover, .next:hover {
+  background-color: #7e22ce;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
 /* ======================= */
 /*        TEXTOINF         */
 .textoinf,
