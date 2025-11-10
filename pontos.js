@@ -1,9 +1,6 @@
 // URL original do App Script
 const url = "https://script.google.com/macros/s/AKfycbyx8QpyggK8AyzR1y6_gVTHVzJrvyBvsGZoDi0aTpkEPvDeQTCZk24OpdyBfJWMj_L1/exec";
 
-const urlOriginal = "https://script.google.com/macros/s/AKfycbyx8QpyggK8AyzR1y6_gVTHVzJrvyBvsGZoDi0aTpkEPvDeQTCZk24OpdyBfJWMj_L1/exec";
-
-
 async function carregarPontos() {
   try {
     const resposta = await fetch(url);
