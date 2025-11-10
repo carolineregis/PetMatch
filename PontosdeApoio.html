@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paws - Início</title>
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+        
+        <div class="regua" id="regua">
+            <a href="#" id="logoBtn" class="logo"> 
+              <img src="images/icon.png" class="icone1"/>
+            </a>
+           </div>
+      <nav>
+       
+        <ul>
+         <li><a href="index.html"> Início </a> </li>
+          <li><a href="PontosdeApoio.html"> Pontos de Apoio</a></li>
+          <li><a href="Blog.html"> Blog </a> </li>
+          <li><a href="Sobre.html"> Sobre </a></li>
+          <li><a href="Contato.html"> Contato </a></li>
+          
+        </ul>
+        <button class="btn" onclick="toggleBusca()">
+          <img src="images/lupa.png" class="lupa" alt="Pesquisar"/> 
+        </button>
+         <div id="campoBusca" class="busca-container oculto">
+           <input type="text" id="barraBusca" placeholder="Digite sua busca..." />
+          </div>
+      </nav>
+
+      <div class="banner fade-in">
+        <div class=container> <img src="images/titulo1.png" class="titulo1" alt="Título" />
+        <img src="images/textobanner.png" class="texto1" alt="Texto" />
+        </div>
+        <img src="images/banner1.png" class="banner2" alt="Banner" />
+      </div>
+    </header>
+    </header>
+
+   <div class="bg fade-in">
+   
+       <h1>Fazendo da nossa  <span style="color:#a855f7;"> cidade</span> <br> um lar saudável para os <span style="color:#a855f7;"> animais</span></h1>
+        <div class="slide-container">
+          <div class="slides1">
+            <h3 class="card-titulo1">Ponto de Apoio 1</h3>
+            <img src="images/ex.1.webp" class="slide-image" alt="Ponto de Apoio 1"/>
+              <p class="p-card1"> Localização: Rua 3, Praça Pôr do Sol <br> Responsável: Marianna Souza <br> Status água: 8/10 <br> Status ração: 4/10</p>
+            
+          </div>
+           <div class="slides1">
+            <h3 class="card-titulo1">Ponto de Apoio 1</h3>
+            <img src="images/ex.1.webp" class="slide-image" alt="Ponto de Apoio 1"/>
+            <p class="p-card1"> Localização: Rua 3, Praça Pôr do Sol <br> Responsável: Marianna Souza <br> Status água: 8/10 <br> Status ração: 4/10</p>
+          </div>
+           <div class="slides1">
+            <h3 class="card-titulo1">Ponto de Apoio 1</h3>
+            <img src="images/ex.1.webp" class="slide-image" alt="Ponto de Apoio 1"/>
+            <p class="p-card1"> Localização: Rua 3, Praça Pôr do Sol <br> Responsável: Marianna Souza <br> Status água: 8/10 <br> Status ração: 4/10</p>
+          </div>
+           <div class="slides1">
+            <h3 class="card-titulo1">Ponto de Apoio 1</h3>
+            <img src="images/ex.1.webp" class="slide-image" alt="Ponto de Apoio 1"/>
+           <p class="p-card1"> Localização: Rua 3, Praça Pôr do Sol <br> Responsável: Marianna Souza <br> Status água: 8/10 <br> Status ração: 4/10</p>
+          </div>
+           <div class="slides1">
+            <h3 class="card-titulo1">Ponto de Apoio 1</h3>
+            <img src="images/ex.1.webp" class="slide-image" alt="Ponto de Apoio 1"/>
+            <p class="p-card1"> Localização: Rua 3, Praça Pôr do Sol <br> Responsável: Marianna Souza <br> Status água: 8/10 <br> Status ração: 4/10</p>
+          </div>
+        </div>
+      </div>
+
+   <gmp-map center="-12.145802282381844, -44.985759906632246" zoom="16" map-id="DEMO_MAP_ID" style="height:500px; width:100%;" id="meuMapa">
+  
+  <gmp-advanced-marker position="-12.146657595047884, -44.97558771720186" title="Ponto de Apoio 1" id="marker1">
+    <img src="images/image-removebg-preview (1).png" class="pins"/>
+  </gmp-advanced-marker>
+
+  <gmp-advanced-marker position="-12.148887252505503, -44.99677231800974" title="Ponto de Apoio 2" id="marker2">
+    <img src="images/image-removebg-preview (1).png" class="pins"/>
+  </gmp-advanced-marker>
+
+  <gmp-advanced-marker position="-12.144339088057894, -44.99240677623022" title="Ponto de Apoio 3" id="marker3">
+    <img src="images/image-removebg-preview (1).png" class="pins"/>
+  </gmp-advanced-marker>
+
+</gmp-map>
+
+<!--
+<script>
+  // Espera o mapa carregar
+  window.addEventListener("gmp-load", () => {
+    const map = document.getElementById("meuMapa");
+
+    const infoContents = {
+      marker1: "<h3>Ponto de Apoio 1</h3><p>Endereço: Rua Exemplo, 123</p><p>Telefone: (77) 1234-5678</p><p>Horário: 08:00 - 18:00</p>",
+      marker2: "<h3>Ponto de Apoio 2</h3><p>Endereço: Avenida Exemplo, 456</p><p>Telefone: (77) 8765-4321</p><p>Horário: 09:00 - 17:00</p>",
+      marker3: "<h3>Ponto de Apoio 3</h3><p>Endereço: Praça Exemplo, 789</p><p>Telefone: (77) 5555-5555</p><p>Horário: 10:00 - 16:00</p>"
+    };
+
+    let currentInfoWindow = null; // Para fechar InfoWindow anterior
+
+    Object.keys(infoContents).forEach(markerId => {
+      const marker = document.getElementById(markerId);
+
+      marker.addEventListener("click", () => {
+        // Fecha InfoWindow anterior
+        if (currentInfoWindow) {
+          currentInfoWindow.remove();
+        }
+
+        // Cria div de InfoWindow
+        const infoDiv = document.createElement("div");
+        infoDiv.className = "infoWindow";
+        infoDiv.style.position = "absolute";
+        infoDiv.style.background = "white";
+        infoDiv.style.padding = "10px";
+        infoDiv.style.border = "2px solid #333";
+        infoDiv.style.borderRadius = "8px";
+        infoDiv.style.zIndex = "100";
+        infoDiv.innerHTML = infoContents[markerId];
+
+        // Posiciona a InfoWindow próxima ao marcador
+        const rect = marker.getBoundingClientRect();
+        infoDiv.style.left = rect.left + "px";
+        infoDiv.style.top = rect.top - rect.height - 10 + "px";
+
+        document.body.appendChild(infoDiv);
+        currentInfoWindow = infoDiv;
+      });
+    });
+  });
+</script>
+ -->
+
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&loading=async&libraries=marker&v=beta&solution_channel=GMP_CCS_complexmarkers_v3"
+      defer
+    ></script>
+  </body>
+
+	<script src="script.js"></script>
+  <script>
+  const logo = document.getElementById('logoBtn'); // pega o link com a logo
+const regua = document.getElementById('regua');  // pega a régua
+
+logo.addEventListener('click', e => {
+  e.preventDefault();               // impede o comportamento padrão do link
+  regua.classList.toggle('abrir');  // adiciona/remove a classe "abrir" na régua
+  logo.classList.toggle('caindo');  // adiciona/remove a classe "caindo" na logo
+});
+</script>
+ <script>
+  function toggleBusca() {
+    const campo = document.getElementById("campoBusca");
+    campo.classList.toggle("visivel");
+  }
+</script>
+<script>
+  function toggleBusca() {
+    const campo = document.getElementById("campoBusca");
+    campo.classList.toggle("visivel");
+  }
+
+  document.getElementById("barraBusca").addEventListener("input", function () {
+    const termo = this.value.toLowerCase();
+    const elementos = document.querySelectorAll("p, h1, h2, h3, li, span"); // Seleciona todos os elementos de texto
+
+    elementos.forEach(el => {
+      const texto = el.textContent.toLowerCase();
+      if (texto.includes(termo)) {
+        el.style.backgroundColor = "#ffffcc"; // Destaque amarelinho
+        el.scrollIntoView({ behavior: "smooth", block: "center" });
+      } else {
+        el.style.backgroundColor = "transparent"; // remove destaque
+      }
+    });
+  });
+</script>
+
+</html>

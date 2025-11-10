@@ -2,65 +2,135 @@
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="wisth=device-width, initial-scale=1.0" />
-    <title>Paws - Início</title>
-    <link rel="icon" type="image/png" href="icone.png" />
-    <!-- a fazer ainda -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pet Watch - Home</title>
+    <link rel="icon" type="image/png" href="images/icon.png" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
-        <img src="icon.png" class="icone1"/>
-      <nav>
+        <nav>
+        <div class="regua" id="regua">
+            <a href="#" id="logoBtn" class="logo"> 
+              <img src="images/icon.png" class="icone1"/>
+            </a>
+           </div>
+    
        
         <ul>
-          <li>Início</li>
-          <li>Pontos de apoio</li>
-          <li>Blog</li>
-          <li>Sobre</li>
-          <li>Contato</li>
+         <li><a href="index.html"> Início </a> </li>
+          <li><a href="PontosdeApoio.html"> Pontos de Apoio</a></li>
+          <li><a href="Blog.html"> Blog </a> </li>
+          <li><a href="Sobre.html"> Sobre </a></li>
+          <li><a href="Contato.html"> Contato </a></li>
+          
         </ul>
+         <button class="btn" onclick="toggleBusca()"> 
+          
+        </button>
+
+        <div id="campoBusca" class="busca-container oculto">
+          <input type="text" id="barraBusca" placeholder="Digite sua busca..." />
+        </div>
       </nav>
 
       <div class="banner fade-in">
-       
-        <img src="titulo1.png" class="titulo1" />
-        
-        <img src="banner1.png" class="banner2" />
-        
+        <div class=container> <img src="images/titulo1.png" class="titulo1" alt="Título" />
+        <img src="images/textobanner.png" class="texto1" alt="Texto" />
+        </div>
+        <img src="images/banner1.png" class="banner2" alt="Banner" />
       </div>
     </header>
 
-    <div class="about-us fade-in">
-      <div class="title-h1">
-        <p>About Us</p>
-      </div>
+    <main class="site-main">
+      <div class="bg fade-in">
+        <div class="nboxes">
+          <div class="box vertical">
+            <img src="images/icones3.png" class="icones" alt="ícone 1"/>
+            <div class="textobox">
+              <h3>Cuidados sempre por perto</h3>
+              <p class="p-icons">Confira nossos pontos de apoio e se torne um voluntário e etissceterah</p>
+              
+            </div>
+          </div>
 
-      <div class="nboxes">
-        <div class="box1">
-        <p>
-          YOU FAT BALD BASTARD, YOU PIECE OF SUBHUMAN TRASH. 2000 YEARS OF
-          CONSTANT HUMAN EVOLUTION TO CREATE A HAIRLESS FUCKING COCONUT. MY GOD
-          WHAT IS WRONG WITH YOU.
-        </p>
-       </div>
-        <div class="box2">
-        <p>
-          YOU FAT BALD BASTARD, YOU PIECE OF SUBHUMAN TRASH. 2000 YEARS OF
-          CONSTANT HUMAN EVOLUTION TO CREATE A HAIRLESS FUCKING COCONUT. MY GOD
-          WHAT IS WRONG WITH YOU.
-        </p>
-       </div>
-        <div class="box3">
-        <p>
-          YOU FAT BALD BASTARD, YOU PIECE OF SUBHUMAN TRASH. 2000 YEARS OF
-          CONSTANT HUMAN EVOLUTION TO CREATE A HAIRLESS FUCKING COCONUT. MY GOD
-          WHAT IS WRONG WITH YOU.
-        </p>
-       </div>
+          <div class="box vertical">
+            <img src="images/icones2.png" class="icones" alt="ícone 2"/>
+            <div class="textobox">
+              <h3>Ajude, mesmo sem adotar</h3>
+              <p class="p-icons">Você pode ajudar a cuidar de animais que necessitam de abrigo, alimentação e carinho.</p>
+             
+            </div>
+          </div>
+
+          <div class="box vertical">
+            <img src="images/icones1.png" class="icones" alt="ícone 3"/>
+            <div class="textobox">
+              <h3>Encontre seu novo melhor amigo</h3>
+              <p class="p-icons">Conheça nossos pets disponíveis para adoção e encontre o seu novo melhor amigo.</p>
+              
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="textoinf">
+          <p class="p-icons"> Com um sistema de pontos de apoio e monitoramento que integra voluntários, protetores e agentes públicos, buscamos enfrentar um problema cada vez mais corrente em nossa sociedade: a carência de atenção para com os animais de rua. </p>
+       
+          
+           
+        </div>
+         <div class="textoinf2">
+          
+          <p class="p-icons"> Com um sistema de pontos de apoio e monitoramento que integra voluntários, protetores e agentes públicos, buscamos enfrentar um problema cada vez mais corrente em nossa sociedade: a carência de atenção para com os animais de rua. </p>
+         
+          
+           
+        </div>
+        
+        <footer style="flex-direction: column;"> 
+          <div class="row">
+                       <hr> 
+          </div>
+
+          <div class="row" style="display: flex;    flex-direction: row;">
+            <!-- Coluna 1 -->
+    <div class="footer-col">
+      <h3> <img src="images/icon.png" style="Width: 50px; margin: -50px 0 -18px 0;"> PetWatch</h3>
+      <p><strong>Opening Time</strong></p>
+      <p>Sunday–Friday: 8am–6pm<br>Saturday: Closed</p>
+      <div class="social-icons">
+        <a href="#">🌐</a>
+        <a href="#">📘</a>
+        <a href="#">📸</a>
       </div>
     </div>
-  </body>
 
-	<script src="script.js"></script>
-</html>
+    
+
+    <!-- Coluna 3 -->
+    <div class="footer-col">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#">Cat</a></li>
+        <li><a href="#">Puppy</a></li>
+        <li><a href="#">Kitten</a></li>
+        <li><a href="#">Whole prey</a></li>
+        <li><a href="#">Small animals</a></li>
+      </ul>
+    </div>
+
+    <!-- Coluna 4 -->
+    <div class="footer-col">
+      <h3>Here To Help</h3>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Delivery</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+          </div>
+  </footer>
+  <div class= "footermain"> QUEM SOMOS | © 2025 PetWatch. All rights reserved. </div>
+ </html>

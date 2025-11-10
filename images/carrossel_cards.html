@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrossel de Cards</title>
+
+  <!-- Importa o CSS do Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .swiper {
+      width: 90%;
+      max-width: 900px;
+    }
+
+    .swiper-slide {
+      background: #fff;
+      border-radius: 15px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .card-title {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: #2b2d42;
+    }
+
+    .price {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #6a4cff;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 15px 0;
+      color: #555;
+    }
+
+    ul li {
+      margin-bottom: 8px;
+    }
+
+    button {
+      background: #6a4cff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background: #4a2fcc;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Container do Swiper -->
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      
+      <!-- Card 1 -->
+      <div class="swiper-slide">
+        <h3 class="card-title">Day Care</h3>
+        <p class="price">$45.67</p>
+        <ul>
+          <li>✓ Single Room</li>
+          <li>✓ Pet Grooming</li>
+          <li>✓ 24/7 Support</li>
+        </ul>
+        <button>Choose Plan</button>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="swiper-slide">
+        <h3 class="card-title">2x Care</h3>
+        <p class="price">$70.05</p>
+        <ul>
+          <li>✓ Double Room</li>
+          <li>✓ Grooming + Food</li>
+          <li>✓ 24/7 Support</li>
+        </ul>
+        <button>Choose Plan</button>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="swiper-slide">
+        <h3 class="card-title">4x Care</h3>
+        <p class="price">$90.50</p>
+        <ul>
+          <li>✓ Suite</li>
+          <li>✓ Grooming + Food + Vet</li>
+          <li>✓ 24/7 Support</li>
+        </ul>
+        <button>Choose Plan</button>
+      </div>
+    </div>
+
+    <!-- Botões de navegação -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+
+    <!-- Paginação -->
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <!-- Importa o JS do Swiper -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script>
+    const swiper = new Swiper('.swiper', {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      loop: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 2
+        },
+        1024: {
+          slidesPerView: 3
+        }
+      }
+    });
+  </script>
+</body>
+</html>
