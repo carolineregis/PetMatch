@@ -1,4 +1,33 @@
-// URL original do App Script
+/* Toggle do menu hamburger */
+const menu = document.querySelector('.menu-icon'); // hamburger
+const navLinks = document.querySelector('nav ul');
+
+menu.addEventListener('click', () => {
+  if (!navLinks.classList.contains('active')) {
+    navLinks.classList.add('active');
+    navLinks.classList.remove('deactive');
+  } else {
+    navLinks.classList.add('deactive');
+    navLinks.classList.remove('active');
+  }
+});
+
+/* Fecha o menu ao clicar em qualquer link */
+const links = document.querySelectorAll('nav ul li a');
+
+links.forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.add('deactive');
+    navLinks.classList.remove('active');
+  });
+});
+
+
+window.addEventListener('load', () => {
+  const loadingScreen = document.getElementById('loading-screen');
+  loadingScreen.style.display = 'block';
+});
+
 const url = "https://script.google.com/macros/s/AKfycbyx8QpyggK8AyzR1y6_gVTHVzJrvyBvsGZoDi0aTpkEPvDeQTCZk24OpdyBfJWMj_L1/exec";
 
 const urlOriginal = "https://script.google.com/macros/s/AKfycbyx8QpyggK8AyzR1y6_gVTHVzJrvyBvsGZoDi0aTpkEPvDeQTCZk24OpdyBfJWMj_L1/exec";
@@ -39,4 +68,4 @@ async function carregarPontos() {
 }
 
 // Executa quando a página terminar de carregar
-document.addEventListener("DOMContentLoaded", carregarPontos);
+document.addEventListener("DOMContentLoaded", carregarPontos); */

@@ -4,46 +4,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Paws - Pontos de Apoio</title>
-    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <title>PetWatch - Pontos de Apoio</title>
+    <link rel="icon" type="image/png" href="images/icon.png" />
     <link rel="stylesheet" href="style.css" />
-    <script src="pontos.js" defer></script>
+    <script src="script.js" defer></script>
   </head>
 
   <body>
     <header>
+      <nav>
       <div class="regua" id="regua">
-        <a href="#" id="logoBtn" class="logo">
+        <a href="index.html" id="logoBtn" class="logo">
           <img src="images/icon.png" class="icone1" alt="Logo Paws" />
         </a>
       </div>
 
-      <nav>
 
+    <img src="images/icones1.png" class="icon1"/> <p class="titulo"> Pet Watch </p> 
+         <label for="menu-toggle" class="menu-icon">&#9776;</label>
         <ul>
           <li><a href="index.html">Início</a></li>
           <li><a href="PontosdeApoio.html" class="ativo">Pontos de Apoio</a></li>
-          <li><a href="Blog.html">Blog</a></li>
+         
           <li><a href="Sobre.html">Sobre</a></li>
           <li><a href="Contato.html">Contato</a></li>
-
         </ul>
-
-        <button class="btn" onclick="toggleBusca()">
-          <img src="images/lupa.png" class="lupa" alt="Pesquisar" />
-        </button>
-
-
-
-
-
-        <div id="campoBusca" class="busca-container oculto">
-          <input type="text" id="barraBusca" placeholder="Digite sua busca..." />
-
         </div>
       </nav>
-
-
     </header>
 
     <main>
@@ -60,21 +47,10 @@
         <div class="mapa">
           <img src="images/mapa.png" alt="Mapa estático" class="mapa-base" />
 
-          <!-- Marcadores manuais (você pode ajustar o position em CSS) -->
-          <div class="marcador" style="top: 35%; left: 45%;"></div>
-          <div class="marcador" style="top: 55%; left: 60%;"></div>
+          <!-- marcadores a ancoras (reverrr) -->
+          <a href="#PA-01"> <div class="marcador" style="top: 35%; left: 45%;"></div> </a> 
+          <a href="#PA-01"> <div class="marcador" style="top: 55%; left: 60%;"></div> </a>
           <div class="marcador" style="top: 65%; left: 30%;"></div>
-
-
-
-
-
-
-
-
-
-
-
 
         </div>
       </section>
@@ -82,10 +58,63 @@
       <!-- Carrossel de cards -->
       <section class="pontos-container fade-in">
         <h2>Pontos de Apoio Ativos</h2>
-        <div class="slide-container" id="listaPontos"></div>
+        <div class="slide-container" id="listaPontos">
+
+          <!-- Cards de pontos de apoio -->
+          <section class="card" id="PA-01">
+              <h3>PA-01</h3>
+              <p>Endereço: Rua das Flores, 123</p>
+              <p>Nivel de ração: Baixo</p>
+              <p>Nivel de Água: Médio</p>
+              <p>Status: Ativo, em uso.</p>
+          </section>
+
+           <section class="card" id="PA-02">
+            <h3>PA-02</h3>
+            <p>Endereço: Avenida Central, 456</p>
+            <p>Nivel de ração: Alto</p>
+            <p>Nivel de Água: Alto</p>
+            <p>Status: Ativo, em uso.</p>
+          </section>
+
+          <div class="card">
+            <h3>PA-03</h3>
+            <p>Endereço: Praça da Liberdade, 789</p>
+            <p>Nivel de ração: Médio</p>
+            <p>Nivel de Água: Baixo</p>
+            <p>Status: Ativo, em uso.</p>
+          </div>
+
+          <div class="card">
+            <h3>PA-04</h3>
+            <p>Endereço: Rua do Sol, 101</p>
+            <p>Nivel de ração: Baixo</p>
+            <p>Nivel de Água: Médio</p>
+            <p>Status: Ativo, em uso.</p>
+          </div>
+
+          <div class="card">
+            <h3>PA-05</h3>
+            <p>Endereço: Avenida das Américas, 202</p>
+            <p>Nivel de ração: Alto</p>
+            <p>Nivel de Água: Alto</p>
+            <p>Status: Ativo, em uso.</p>
+
+        </div>
       </section>
     </main>
 
     <footer>
-      <p>© 2025 Paws - Todos os direitos reservados 🐾</p>
+     <img src="images/icon.png" style="width: 100px; height: auto; margin: 10px auto auto auto;" alt="Logo Ghost Nebula">   <hr>
+      <p> Siga-nos nas redes sociais</p> 
+      <a href ="https://facebook.com/" target="_blank"> <img src="images/facebookIcon.png" style=" width: 40px; height: auto; margin: 0 10px 0 10px;"></a>
+      <a href ="https://instagram.com/" target="_blank"> <img src="images/InstagramIcon.png" style=" width: 40px; height: auto; margin: 0 10px 0 10px;"></a>
+      <a href ="https://www.youtube.com/" target="_blank"> <img src="images/YoutubeIcon.png" style=" width: 40px; height: auto; margin: 0 10px 0 10px;" ></a> 
+        <p> Termos de privacidade </p>
+        <div style="margin-top: 20px; text-align: center; background-color: rgb(0, 0, 0); width: 100%;">
+      <p>© 2025 PetWatch. Todos os direitos reservados.</p>
+        </div>   
+
     </footer>
+  </body>
+</html>
